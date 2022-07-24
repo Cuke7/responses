@@ -47,7 +47,7 @@ function parse(str: any) {
             yes++;
         }
     }
-
+    console.table(peoples.value);
     peoples.value.reverse();
 
     // google.charts.load("current", { packages: ["corechart"] });

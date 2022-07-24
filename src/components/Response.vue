@@ -23,8 +23,12 @@ defineProps({
                 <div class="text-white text-3xl my-2">
                     {{ people.name }}
                 </div>
-                <div v-if="people.ress == 'Bof'" class="text-3xl">👎</div>
-                <div v-else class="text-3xl">👍</div>
+                <div class="flex">
+                    <div v-if="people.ress == 'Bof'" class="text-3xl">👎</div>
+                    <div v-else class="text-3xl">👍</div>
+                    <div v-if="people.present == 'Oui'" class="text-3xl">✔️</div>
+                    <div v-else class="text-3xl">❌</div>
+                </div>
             </div>
 
             <div class="text-purple">
@@ -33,9 +37,7 @@ defineProps({
             <div class="text-purple">
                 {{ people.hour }}
             </div>
-            <div class="text-white my-2">
-                {{people.present = 'Oui' ? '✔️' : '❌'}} {{ people.plusone }}
-            </div>
+            <div class="text-white my-2">{{ people.plusone }}</div>
             <div class="text-white">
                 {{ people.message }}
             </div>
